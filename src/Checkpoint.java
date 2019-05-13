@@ -30,7 +30,13 @@ public class Checkpoint {
 		 * 5. Print only the cars with "toyota" in the name.
 		 */
 		
+		ArrayList<CarMPGEntry> cme = readCarMPGEntryDataFromFile();
+		Stream<CarMPGEntry> stream = cme.stream();
 		
+		stream.forEach((i) -> {
+			System.out.println(i);
+		});
+
 	}
 	
 	public static ArrayList<CarMPGEntry> readCarMPGEntryDataFromFile(){
